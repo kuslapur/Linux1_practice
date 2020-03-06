@@ -10,5 +10,6 @@ do
 	fi
 
 	echo "Iretation no $a"
+	echo "Hi its Git testing"
 
 done
