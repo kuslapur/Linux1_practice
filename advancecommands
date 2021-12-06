@@ -1,0 +1,184 @@
+Linux commands
+
+ps aux | grep httpd 
+kill pid 
+sed '3 a hello world' 1.txt -> adding new record in 3rd of the file
+sed '$ a This is the last line' 1.txt -> appending last line of the fiile 
+df -Th disk space 
+du -sh * space utilized show in readable formate 
+-d check directory
+-e check file exist or not 
+ls -d */ display all sub directory
+sed -n '20'p docker-compose.yml - Will go to particular line # 
+netstat -pant | grep 92
+sudo ln -s /opt/apache-maven-3.6.0 /opt/maven - Create symbolic link 
+
+aide
+chattr
+ll
+
+sed "s/aaa/111/g" 1.txt > 3.txt ---It will replace all aaa to 111 in all place and print new file 
+sed -i "s/aaa/111/g" 1.txt ---- > will update same file 
+sed '2,$ d' file.txt - will display first line of file 
+sed -n '$ p' 1.txt   - will display last line of the file
+sed -i '$ d' 1.txt last line will be deleted
+sed -i '2 d' 1.txt 2nd line will be deleted
+sed -i '2,3 d' 1.txt - > it will delete the 2 and 3rd line of the file 
+sed -n '1p' 1.txt |wc -c - > length of the line and word cound 
+
+
+sed 's/hi/hello/g' 1.txt - >  It change all hi to hello 
+sed -n '2,3p' 1.txt - > it will not show rows 
+
+
+awk 
+awk '/111/ {print}' 1.txt -> will display 111 record 
+awk '{print $1 $2 $3}' 1.txt - > will delimited the file and will display rows 
+awk 'END {print NR}' 1.txt - No of rows in the file 
+
+ less --> browse file 'q' - Quite from brows space for next page
+more -> browse file 
+head - First 10 lines dislay 
+head - > first 10 lines will display
+tail -> last 10 lines will display 
+
+head -n 20 1.txt - first 20 lines
+tail -n 20 1.txt - last 20 lines will display 
+
+
+
+
+touch 1.txt - > create file 
+ls -l ---> long list all the files with sort
+ls -l -t --> long list all the files based on created latest 
+ls -l -t -r -> reverse listing 
+ls -ltr - combine all the long lisitng 
+
+
+cat 1.txt    - >  browse the file 
+cat > 1.txt  - >  insert data in file
+cat >> 1.txt - >  append data in file
+
+mkdir dir1 dir2 dir3 - create directory 
+rmdir dir1 - remove directory only empty 
+rm - > remove file 
+rm -rf -> remove both file and directory 
+
+mv rename and move 
+cp copy 
+cp -r -> copy directory 
+
+
+
+find -name 1.txt  -> it will search the file 
+grep hi 1.txt    - >  to find string in file 
+grep hi /home/ubuntu/dir1/1.txt - > search in the directory
+grep ls -l |grep 1.txt -> first part output treat as file and list only 1.txt files 
+ls -l |grep ^d --> list all the fils which start with starting postion 'd'
+
+
+adduser  -> add user 
+id user -> tell all the uid gid and details
+cd /home all the user will have directory
+cd /etc/passwd - > will display all the users 
+usermod -G group
+
+Login as user in ec2 machine  
+/etc/ssh/sshd_config
+PasswordAuthentication no  - Make it Yes
+
+
+- - Normal file
+b - block file
+c - character file 
+d -directory file 
+l - link files 
+
+
+history - > all executed commands
+free -m -> ram memory 
+/proc/meminfo - Ram info
+/proc/cpuinfo - CPU info 
+uaame -a - Kernel informatin 
+whereis 
+which
+du 
+du -m
+du -k |sort -rn head - Max utilized 10 files 
+df -Th -hard disk devided 
+df -m 
+
+
+hostname 
+init 6 - 
+wget 
+curl
+
+0 to 65000 plus port a
+21 - FTP
+22 -SSH
+23 -TELENT
+25 -SMTP
+53 -DNS
+80 -HTTP
+443 -HTTPS
+3389 -RDP
+
+
+netstat -tulpn list the ports
+netstat -pant list the prot 
+
+
+service jenkins status 
+service jenkins start
+service jenkins stop
+service jenkins relod 
+
+echkconfig http off
+
+systemctl same asservice 
+sudo -l -U ubuntu
+ usermod -aG docker jenkins
+
+
+find /home/you -iname "*.c" -atime 30 -type f
+find /home/you -iname "*.c" -atime -30 -type f
+
+ps -ef |grep bash list all process with filter bash
+
+
+gzip -> for files 
+crontab -l -> list all corn jobs
+crontab -e -> add corn jobs 
+
+20  17 * * * echo "crontab" >> /tmp/file.txt corn jobs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
