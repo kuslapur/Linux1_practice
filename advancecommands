@@ -1,4 +1,39 @@
+
 Linux commands
+
+
+mkdir ~/.ssh
+apt-get install -y openssh-client
+
+diff 1.txt 2.txt
+sdiff 1.txt 2.txt
+
+ip a - ip addreess
+dmesg - network releted issue 
+dmidcoe
+tcpdump -i any -s0
+
+copy from server to local vice versa 
+scp ubuntu@ip-172-31-38-181:/home/ubuntu/xxxx /home/ubuntu
+scp copy.yaml  ubuntu@ip-172-31-38-181:/home/ubuntu
+
+sudo find /home -type d -name test
+sudo find /var/log -name "*.log" -type f -size +100M
+sudo find /var/log -name "*.log" -type f -mtime -30
+sudo find /var/log -name "*.log" -type f -mtime +30
+chown -R sonaradmin:sonaradmin /opt/sonarqube-7.5 - Giving file permission 
+apt list | grep openjdk
+amazon-linux-extras 
+
+Linux commands
+
+pgrep
+pidof 
+ps aux | grep httpd
+
+--------------------------------------------------------------------------------------------------
+
+
 
 ps aux | grep httpd 
 kill pid 
